@@ -27,6 +27,7 @@ returnstart.addEventListener("click", () => {
 
 const btnnext = document.getElementById('btnnext')
 const btnbefore = document.getElementById('btnbefore')
+const btncc = document.getElementById('btncc')
 const steepone = document.getElementById('steepone')
 const steeptwo = document.getElementById('steeptwo')
 const boxsteepo = document.getElementById('boxsteepo')
@@ -69,9 +70,13 @@ btnbefore.addEventListener("click", () => {
     boxsteepo.style.display = "block"
 })
 
-icoclose.addEventListener("click", () => {
-    formbuysend.style.display = "none"
-})
+
+btncc.addEventListener("click", closeForm)
+icoclose.addEventListener("click", closeForm)
+
+function closeForm () {
+formbuysend.style.display = "none"
+}
 
 const messageplan = document.getElementById('messageplan')
 

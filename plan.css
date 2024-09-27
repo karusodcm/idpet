@@ -456,6 +456,7 @@ width: 100%;
     text-decoration: none;
     text-align: center;
     cursor: pointer;
+    margin: .25rem auto;
 }
 
 .btn-next:hover{
@@ -464,8 +465,27 @@ width: 100%;
     border: 1px solid #a200ff;
 }
 
+.btn-cc{
+    display: block;
+    width: 100%;
+    padding: .3rem;
+    background-color: #5d0292;
+    color: var(--color-white);
+    border: 1px solid #5d0292;
+    border-radius: .25rem;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+}
+
 .nonel{
     display: none;
+}
+
+.btn-cc:hover{
+    background-color: var(--color-white);
+    color: #5d0292 ;
+    border: 1px solid #5d0292;
 }
 
 
