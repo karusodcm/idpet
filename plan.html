@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Planes IDPET</title>
+    <meta name="description" content="Tu mascota segura">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/idico.png">
+    <meta property="og:locale" content="es_Es">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Identificador">
+    <meta property="og:description" content="Plaquitas personalizadas con tecnología NFC y QR.">
+    <meta property="og:url" content="https://www.idpet.org/">
+    <meta property="og:site_name" content="Plaquitas personalizadas con tecnología NFC y QR.">
+    <meta name="theme-color" content="#FFF">
+    <link rel="stylesheet" href="plan.css">
+    <script type="text/javascript" src="qrcode.js"></script>
+    <meta name="theme-color" content="#db9ee5">
+</head>
+
+<body class="body-plan">
+    <header class="header-plan">
+        <nav class="nav-plan">
+            <div class="returnstart" id="returnstart">
+                <a class="nameid-plan">ID</a><a class="namepet-plan">PET</a>
+            </div>
+            <span class="f-triangle-plan" id="ftriangle"></span>
+            <span class="t-triangle-plan" id="ttriangle"></span>
+        </nav>
+        <div class="hup-plan" id="hubplan">
+            <div class="boxcontac-plan">
+                <a href="https://api.whatsapp.com/send?phone=51982067675&text=Hola,%20deseo%20informaci%C3%B3n%20sobre%20las%20plaquitas..."
+                    class="link-plan" target="_blank">Comprar por Whatsapp</a>
+            </div>
+            <div class="boxcontac-plan">
+                <a href="tel:982067675" class="link-plan" target="_blank">Compra por
+                    teléfono</a>
+            </div>
+        </div>
+    </header>
+    <main class="main-plan">
+
+        <section class="data-plan nonel" id="formbuysend">
+            <div class="message-plan" id="messageplan"><p>¡Por favor, completar todos lo campos!</p></div>
+            <div class="secdata-plan">
+                <div class="title-buy-plan">
+                    <p>Carrito de compra</p>
+                    <span class="tx-steep" id="boxsteepo">Paso 1</span>
+                    <span class="tx-steep nonel" id="boxsteeps">Paso 2</span><span class="ico-close" id="icoclose"><svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-x-square-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708" />
+                        </svg></span>
+                </div>
+                <div>
+                    <form action="" class="form-plan">
+                        <div class="steep-plan" id="steepone">
+                            <fieldset class="fieldset-plan">
+                                <legend class="legend-plan">
+                                    Elige tu plan
+                                </legend>
+                                <select type="list" list="planes" class="sform-plan" name="planes" id="planes">
+                                    <datalist id="planeslist">
+                                        <option selected disabled value="">Plan</option>
+                                        <option value="Amigo">Amigo</option>
+                                        <option value="Amoroso">Amoroso</option>
+                                        <option value="Incondicional">Incondicional</option>
+                                    </datalist>
+                                </select>
+
+                            </fieldset>
+
+                            <fieldset class="fieldset-plan">
+                                <legend class="legend-plan">
+                                    Datos de la mascota
+                                </legend>
+                                <input type="text" placeholder="Nombre" class="iform-plan" id="fname">
+                                <input type="tel" placeholder="Celular/Teléfono" class="iform-plan" id="fphone">
+                                <select type="list" list="regiones" class="sform-plan" name="region" id="fregion">
+                                    <datalist id="regiones">
+                                        <option selected disabled value="">Región</option>
+                                        <option value="Amazonas">Amazonas</option>
+                                        <option value="Ancash">Ancash</option>
+                                        <option value="Apurimac">Apurimac</option>
+                                        <option value="Arequipa">Arequipa</option>
+                                        <option value="Ayacucho">Ayacucho</option>
+                                        <option value="Cajamarca">Cajamarca</option>
+                                        <option value="Callao">Callao</option>
+                                        <option value="Cusco">Cusco</option>
+                                        <option value="Huancavelica">Huancavelica</option>
+                                        <option value="Huanuco">Huanuco</option>
+                                        <option value="Ica">Ica</option>
+                                        <option value="Junin">Junin</option>
+                                        <option value="La Libertad">La Libertad</option>
+                                        <option value="Lambayeque">Lambayeque</option>
+                                        <option value="Lima">Lima</option>
+                                        <option value="Loreto">Loreto</option>
+                                        <option value="Madre De Dios">Madre De Dios</option>
+                                        <option value="Moquegua">Moquegua</option>
+                                        <option value="Pasco">Pasco</option>
+                                        <option value="Piura">Piura</option>
+                                        <option value="Puno">Puno</option>
+                                        <option value="San Martin">San Martin</option>
+                                        <option value="Tacna">Tacna</option>
+                                        <option value="Tumbes">Tumbes</option>
+                                        <option value="Ucayali">Ucayali</option>
+                                    </datalist>
+                                </select>
+                                <input type="tel" placeholder="Provincia" class="iform-plan" id="fprovincia">
+                                <input type="tel" placeholder="Distrio" class="iform-plan" id="fdistrito">
+                                <input type="tel" placeholder="Dirección" class="iform-plan" id="fdireccion">
+                                <input type="tel" placeholder="Referencia" class="iform-plan" id="freferencia">
+                                <input type="tel" placeholder="Ubicación de google maps" class="iform-plan" id="fubicacion">
+                                <input type="tel" placeholder="Enviar foto idpet.soporte@gmail.com" disabled
+                                    class="iform-plan">
+                            </fieldset>
+
+                            <a class="btn-next" id="btnnext">Siguiente</a>
+
+                        </div>
+                        <div class="steep-plan nonel" id="steeptwo">
+                            <fieldset class="fieldset-plan">
+                                <legend class="legend-plan">
+                                    Plaquita
+                                </legend>
+                                <select type="list" list="planes" class="sform-plan" name="planes" id="fcolor">
+                                    <datalist id="planeslist">
+                                        <option selected disabled value="">Color</option>
+                                        <option value="Rojo">Rojo</option>
+                                        <option value="Verde">Verde</option>
+                                        <option value="Amarillo">Amarillo</option>
+                                    </datalist>
+                                </select>
+                                <select type="list" list="planes" class="sform-plan" name="planes" id="fmodelo">
+                                    <datalist id="planeslist">
+                                        <option selected disabled value="">Modelo</option>
+                                        <option value="Colita">Colita</option>
+                                        <option value="Normalito">Normalito</option>
+                                        <option value="Orejitas">Orejitas</option>
+                                    </datalist>
+                                </select>
+                            </fieldset>
+
+                            <fieldset class="fieldset-plan">
+                                <legend class="legend-plan">
+                                    Datos de envío
+                                </legend>
+                                <div class="box-checkbox-plan">
+                                <label class="checkbox-plan"><input type="checkbox" id="cdfo" value="completedatafirst" checked> Los mismos datos mi mascota</label></div>
+                                <input type="text" placeholder="DNI/CE" class="iform-plan">
+                                <input type="text" placeholder="Nombres" class="iform-plan">
+                                <input type="text" placeholder="Apellido Paterno" class="iform-plan">
+                                <input type="text" placeholder="Apellido Materno" class="iform-plan">
+                                <input type="tel" placeholder="Celular/Teléfono" class="iform-plan">
+                                <input type="tel" placeholder="Correo Electrónico" class="iform-plan">
+                                <!-- <select type="list" list="regiones" class="sform-plan" name="region" id="region">
+                                    <datalist id="regiones">
+                                        <option selected disabled value="">Región</option>
+                                        <option value="Amazonas">Amazonas</option>
+                                        <option value="Ancash">Ancash</option>
+                                        <option value="Apurimac">Apurimac</option>
+                                        <option value="Arequipa">Arequipa</option>
+                                        <option value="Ayacucho">Ayacucho</option>
+                                        <option value="Cajamarca">Cajamarca</option>
+                                        <option value="Callao">Callao</option>
+                                        <option value="Cusco">Cusco</option>
+                                        <option value="Huancavelica">Huancavelica</option>
+                                        <option value="Huanuco">Huanuco</option>
+                                        <option value="Ica">Ica</option>
+                                        <option value="Junin">Junin</option>
+                                        <option value="La Libertad">La Libertad</option>
+                                        <option value="Lambayeque">Lambayeque</option>
+                                        <option value="Lima">Lima</option>
+                                        <option value="Loreto">Loreto</option>
+                                        <option value="Madre De Dios">Madre De Dios</option>
+                                        <option value="Moquegua">Moquegua</option>
+                                        <option value="Pasco">Pasco</option>
+                                        <option value="Piura">Piura</option>
+                                        <option value="Puno">Puno</option>
+                                        <option value="San Martin">San Martin</option>
+                                        <option value="Tacna">Tacna</option>
+                                        <option value="Tumbes">Tumbes</option>
+                                        <option value="Ucayali">Ucayali</option>
+                                    </datalist>
+                                </select> -->
+                                <input type="tel" placeholder="Departamento/Provincia/Distrito" class="iform-plan" id="mplaceplan">
+                                <!-- <input type="tel" placeholder="Distrio" class="iform-plan"> -->
+                                <input type="tel" placeholder="Dirección/Referencia" class="iform-plan" id="madressplan">
+                                <!-- <input type="tel" placeholder="Referencia" class="iform-plan"> -->
+                            </fieldset>
+                            <a class="btn-next" id="btnbefore">Atrás</a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+        </section>
+        <section class="section-plan">
+            <p class="title-plan">PLANES</p>
+            <div class="sdivs-plan">
+                <div class="protect-plan-f" id="planami">
+                    <p class="text-plan">Plan Amigo</p>
+                    <div class="content-plan">
+                        <div class="fcontent-plan">
+                            <p class="n-plan">Protección por 3 MESES</p>
+                            <p class="n-plan">Plaquita personalizada</p>
+                            <p class="n-plan">Código QR</p>
+                            <p class="n-plan">S/.21</p>
+                        </div>
+                        <div>
+                            <button class="btn-plan cpf" id="btnaddam">Adquirir</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="protect-plan-t" id="planamo">
+                    <p class="text-plan opco">Plan Amoroso</p>
+                    <div class="content-plan">
+                        <div class="fcontent-plan">
+                            <p class="n-plan">Protección por 6 MESES</p>
+                            <p class="n-plan">Plaquita personalizada</p>
+                            <p class="n-plan">Código QR</p>
+                            <p class="n-plan addam">S/.38</p>
+                        </div>
+                        <div>
+                            <button class="btn-plan cpt" id="btnadda">Adquirir</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="protect-plan-tr" id="planinc">
+                    <p class="text-plan opci">Plan Incondicional</p>
+                    <div class="content-plan">
+                        <div class="fcontent-plan">
+                            <p class="n-plan">Protección por 12 MESES</p>
+                            <p class="n-plan">Plaquita personalizada</p>
+                            <p class="n-plan">Código QR</p>
+                            <p class="n-plan addin">S/.79</p>
+                        </div>
+                        <div>
+                            <button class="btn-plan cptr" id="btnaddi">Adquirir</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="txfoo">Copyright © 2024 idpet.org All rights reserved.</p>
+    </footer>
+    <script src="bd.js">
+
+
+    </script>
+
+
+</body>
+
+</html>
