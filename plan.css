@@ -417,7 +417,7 @@ width: 100%;
 .fieldset-plan{
     border: none;
     margin: .5rem auto;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #fff;
     padding-bottom: .5rem;
 }
 
@@ -427,8 +427,10 @@ width: 100%;
     margin: .3rem auto;
     padding: .5rem;
     border-radius: 0.25rem;
-    border: 1px solid grey;
+    border: 1px solid rgb(0, 255, 170);
     font-size: .9rem;
+    background-color: #fff;
+    color: rgb(82, 82, 82);
 }
 
 .iform-plan{
@@ -437,9 +439,15 @@ width: 100%;
     margin: .3rem auto;
     padding: .5rem;
     border-radius: 0.25rem;
-    border: 1px solid grey;
+    border: 1px solid rgb(0, 255, 170);
     font-size: .9rem;
+    color: rgb(54, 54, 54);
 }
+
+.iform-plan::placeholder{
+    color: rgb(75, 75, 75);
+}
+
 
 .box-checkbox-plan{
     margin: .5rem 0;
@@ -492,6 +500,22 @@ width: 100%;
     background-color: #8100cc;
     color: #fff ;
     border: 1px solid #8100cc;
+}
+
+input:focus {
+    border-color: rgb(0, 255, 170);
+    outline: rgb(0, 255, 170);
+    border: 2px solid rgb(0, 255, 170);
+}
+
+.iform-plan:focus::placeholder{
+    color: rgb(0, 143, 95);
+}
+
+select:focus {
+    border-color: rgb(0, 255, 170);
+    outline: rgb(0, 255, 170);
+    border: 2px solid rgb(0, 255, 170);
 }
 
 

@@ -41,6 +41,11 @@
     </header>
     <main class="main-plan">
 
+        <section class="completebuy" id="completebuy">
+             
+
+        </section>
+
         <section class="data-plan nonel" id="formbuysend">
             <div class="message-plan" id="messageplan">
                 <p>¡Por favor, completar todos lo campos!</p>
@@ -57,7 +62,7 @@
                         </svg></span>
                 </div>
                 <div>
-                    <form action="" class="form-plan">
+                    <form action="" class="form-plan" id="frm">
                         <div class="steep-plan" id="steepone">
                             <fieldset class="fieldset-plan">
                                 <legend class="legend-plan">
@@ -79,6 +84,13 @@
                                     Datos de la mascota
                                 </legend>
                                 <input type="text" placeholder="Nombre" class="iform-plan" id="fname">
+                                <select type="list" list="sgender" class="sform-plan" name="gender" id="gender">
+                                    <datalist id="sgender">
+                                        <option selected disabled value="">Género</option>
+                                        <option value="F">F</option>
+                                        <option value="M">M</option>
+                                    </datalist>
+                                </select>
                                 <input type="tel" placeholder="Celular/Teléfono" class="iform-plan" id="fphone">
                                 <select type="list" list="regiones" class="sform-plan" name="region" id="fregion">
                                     <datalist id="regiones">
@@ -135,9 +147,12 @@
                                 <select type="list" list="planes" class="sform-plan" name="planes" id="fcolor">
                                     <datalist id="planeslist">
                                         <option selected disabled value="">Color</option>
-                                        <option value="Rojo">Rojo</option>
+                                        <option value="Blanco">Blanco</option>
+                                        <option value="Anaranjado">Anaranjado</option>
                                         <option value="Verde">Verde</option>
-                                        <option value="Amarillo">Amarillo</option>
+                                        <option value="Morado">Morado</option>
+                                        <option value="Marron">Marron</option>
+                                        <option value="Negro">Negro</option>
                                     </datalist>
                                 </select>
                                 <select type="list" list="planes" class="sform-plan" name="planes" id="fmodelo">
@@ -156,7 +171,7 @@
                                 </legend>
                                 <div class="box-checkbox-plan">
                                     <label class="checkbox-plan"><input type="checkbox" id="cdfo"
-                                            value="completedatafirst" checked> Los mismos datos mi mascota</label>
+                                            checked> Los mismos datos mi mascota</label>
                                 </div>
                                 <input type="text" placeholder="DNI/CE" class="iform-plan">
                                 <input type="text" placeholder="Nombres" class="iform-plan">
@@ -201,8 +216,11 @@
                                     id="madressplan">
                                 <!-- <input type="tel" placeholder="Referencia" class="iform-plan"> -->
                             </fieldset>
-                            <a class="btn-next" id="btnbefore">Atrás</a>
-                            <a class="btn-cc" id="btnadd">Adquirir</a>
+
+                            <div class="group-btn">
+                                <a class="btn-cc" id="btnbefore">Atrás</a>
+                                <button class="btn-next" id="btnadd">Adquirir</button>
+                            </div>
                         </div>
 
                     </form>
