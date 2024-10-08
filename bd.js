@@ -2,7 +2,15 @@ const scroll = () => innerWidth - document.documentElement.clientWidth
 
 document.documentElement.style.setProperty('--scroll-bar', scroll())
 
-//slice triangule
+//page index
+
+const returnstart = document.getElementById('returnstart')
+
+returnstart.addEventListener("click", () => {
+    window.location.href = "index.html"
+})
+
+//options triangule
 
 const ftriangle = document.getElementById('ftriangle')
 const ttriangle = document.getElementById('ttriangle')
@@ -20,52 +28,65 @@ ttriangle.addEventListener("click", () => {
     ttriangle.style.display = "none"
 })
 
-const returnstart = document.getElementById('returnstart')
+//open form
 
-returnstart.addEventListener("click", () => {
-    window.location.href = "index.html"
-})
+const boxform = document.getElementById('boxform')
 
-const btnnext = document.getElementById('btnnext')
-const btnbefore = document.getElementById('btnbefore')
-const btncc = document.getElementById('btncc')
 const steepone = document.getElementById('steepone')
 const steeptwo = document.getElementById('steeptwo')
+
 const boxsteepo = document.getElementById('boxsteepo')
 const boxsteeps = document.getElementById('boxsteeps')
-const icoclose = document.getElementById('icoclose')
-const formbuysend = document.getElementById('formbuysend')
+
+//buttons
+
 const btnaddam = document.getElementById('btnaddam')
 const btnadda = document.getElementById('btnadda')
 const btnaddi = document.getElementById('btnaddi')
 
+const icoclose = document.getElementById('icoclose')
+const btncc = document.getElementById('btncc')
+
+const btnnext = document.getElementById('btnnext')
+const btnbefore = document.getElementById('btnbefore')
+
 const btnadd = document.getElementById('btnadd')
+
+//conten-form input
 
 const planes = document.getElementById('planes')
 
+const pricefirst = document.getElementById('pricefirst').textContent
+const pricesecond = document.getElementById('pricesecond').textContent
+const pricethree = document.getElementById('pricethree').textContent
+
+//open form for plans
+
+const priceselect = document.getElementById('priceselect')
 
 btnaddam.addEventListener("click", () => {
-    formbuysend.style.display = "flex"
+    boxform.style.display = "flex"
     planes.value = 'Amigo'
     planes.style.border = '1px solid #a200ff'
     planes.style.color = '#a200ff'
+    priceselect.value = pricefirst
 })
 
 btnadda.addEventListener("click", () => {
-    formbuysend.style.display = "flex"
+    boxform.style.display = "flex"
     planes.value = 'Amoroso'
     planes.style.border = '1px solid #ff0080'
     planes.style.color = '#ff0080'
+    priceselect.value = pricesecond
 })
 
 btnaddi.addEventListener("click", () => {
-    formbuysend.style.display = "flex"
+    boxform.style.display = "flex"
     planes.value = 'Incondicional'
     planes.style.border = '1px solid #c300ff'
     planes.style.color = '#c300ff'
+    priceselect.value = pricethree
 })
-
-btnnext.addEventListener("click", unirTexto)
 
 btnbefore.addEventListener("click", () => {
     steepone.style.display = "block"
@@ -74,110 +95,139 @@ btnbefore.addEventListener("click", () => {
     boxsteepo.style.display = "block"
 })
 
+//close form
 
 btncc.addEventListener("click", closeForm)
 icoclose.addEventListener("click", closeForm)
 
 function closeForm() {
-    formbuysend.style.display = "none"
+    boxform.style.display = "none"
 }
+
+//invalid message
 
 const messageplan = document.getElementById('messageplan')
 
-let mplaceplan = document.getElementById('mplaceplan')
-let madressplan = document.getElementById('madressplan')
+//conten-form input
+const fname = document.getElementById('fname')
+const gender = document.getElementById('gender')
+const fphone = document.getElementById('fphone')
+const fregion = document.getElementById('fregion')
+const fprovincia = document.getElementById('fprovincia')
+const fdistrito = document.getElementById('fdistrito')
+const fdireccion = document.getElementById('fdireccion')
+const freferencia = document.getElementById('freferencia')
+const fubicacion = document.getElementById('fubicacion')
+const valueselect = document.getElementById('valueselect')
+
+//conten-form second input
+
+const csdni = document.getElementById('csdni')
+const csname = document.getElementById('csname')
+const cspname = document.getElementById('cspname')
+const csmname = document.getElementById('csmname')
+const csemail = document.getElementById('csemail')
+const csphone = document.getElementById('csphone')
+const mplaceplan = document.getElementById('mplaceplan')
+const madressplan = document.getElementById('madressplan')
+
+//complete fields
+
+btnnext.addEventListener("click", unirTexto)
 
 function unirTexto() {
-    let fname = document.getElementById('fname').value;
-    let fphone = document.getElementById('fphone').value;
+    const jplanes = document.getElementById('planes').value
+    const jfname = document.getElementById('fname').value
+    const jgender = document.getElementById('gender').value
+    const jfphone = document.getElementById('fphone').value
+    const jfregion = document.getElementById('fregion').value
+    const jfprovincia = document.getElementById('fprovincia').value
+    const jfdistrito = document.getElementById('fdistrito').value
+    const jfdireccion = document.getElementById('fdireccion').value
+    const jfreferencia = document.getElementById('freferencia').value
+    const jfubicacion = document.getElementById('fubicacion').value
 
-    let fregion = document.getElementById('fregion').value;
-    let fprovincia = document.getElementById('fprovincia').value;
-    let fdistrito = document.getElementById('fdistrito').value;
-    let fdireccion = document.getElementById('fdireccion').value;
-    let freferencia = document.getElementById('freferencia').value;
+    let arrayPalabras = jfregion + '/' + jfprovincia + '/' + jfdistrito
+    let arrayAdress = jfdireccion + '/' + jfreferencia
 
-    let fubicacion = document.getElementById('fubicacion').value;
-
-    let cfname = document.getElementById('fname')
-    let cfphone = document.getElementById('fphone')
-    let gender = document.getElementById('gender')
-
-    let cfregion = document.getElementById('fregion')
-    let cfprovincia = document.getElementById('fprovincia')
-    let cfdistrito = document.getElementById('fdistrito')
-    let cfdireccion = document.getElementById('fdireccion')
-    let cfreferencia = document.getElementById('freferencia')
-
-    let cfubicacion = document.getElementById('fubicacion')
-
-    let arrayPalabras = fregion + '/' + fprovincia + '/' + fdistrito
-    let arrayAdress = fdireccion + '/' + freferencia
-
-    if (fname === '' || fphone === '' || fregion === '' || fprovincia === '' || fdistrito === '' || fdireccion === '' || freferencia === '' || fubicacion === '') {
-        cfname.style.border = '1px solid red';
-        cfphone.style.border = '1px solid red';
-        cfregion.style.border = '1px solid red';
-        cfprovincia.style.border = '1px solid red';
-        cfdistrito.style.border = '1px solid red';
-        cfdireccion.style.border = '1px solid red';
-        cfreferencia.style.border = '1px solid red';
-        cfubicacion.style.border = '1px solid red';
+    if (jfname === '' || jfphone === '' || jfregion === '' || jfprovincia === '' || jfdistrito === '' || jfdireccion === '' || jfreferencia === '' || jfubicacion === '') {
+        fname.style.border = '1px solid red';
+        fphone.style.border = '1px solid red';
+        fregion.style.border = '1px solid red';
+        fprovincia.style.border = '1px solid red';
+        fdistrito.style.border = '1px solid red';
+        fdireccion.style.border = '1px solid red';
+        freferencia.style.border = '1px solid red';
+        fubicacion.style.border = '1px solid red';
         gender.style.border = '1px solid red';
         messageplan.style.display = "flex";
         setTimeout(() => {
             messageplan.style.display = "none";
-            cfname.style.border = '1px solid rgb(0, 255, 170)';
-            cfphone.style.border = '1px solid rgb(0, 255, 170)';
-            cfregion.style.border = '1px solid rgb(0, 255, 170)';
-            cfprovincia.style.border = '1px solid rgb(0, 255, 170)';
-            cfdistrito.style.border = '1px solid rgb(0, 255, 170)';
-            cfdireccion.style.border = '1px solid rgb(0, 255, 170)';
-            cfreferencia.style.border = '1px solid rgb(0, 255, 170)';
-            cfubicacion.style.border = '1px solid rgb(0, 255, 170)';
+            fname.style.border = '1px solid rgb(0, 255, 170)';
+            fphone.style.border = '1px solid rgb(0, 255, 170)';
+            fregion.style.border = '1px solid rgb(0, 255, 170)';
+            fprovincia.style.border = '1px solid rgb(0, 255, 170)';
+            fdistrito.style.border = '1px solid rgb(0, 255, 170)';
+            fdireccion.style.border = '1px solid rgb(0, 255, 170)';
+            freferencia.style.border = '1px solid rgb(0, 255, 170)';
+            fubicacion.style.border = '1px solid rgb(0, 255, 170)';
             gender.style.border = '1px solid rgb(0, 255, 170)';
         }, 2000)
 
     } else {
+        valueselect.value = jplanes
+
         mplaceplan.value = arrayPalabras.toUpperCase()
         madressplan.value = arrayAdress.toUpperCase()
+        csphone.value = jfphone
 
         mplaceplan.style.display = "none"
         madressplan.style.display = "none"
+        csphone.style.display = "none"
 
         steepone.style.display = "none"
         steeptwo.style.display = "block"
         boxsteeps.style.display = "block"
         boxsteepo.style.display = "none"
-
     }
 
 }
 
+//change address
 
 const cdfo = document.getElementById('cdfo')
 
 cdfo.addEventListener("change", () => {
-    if(!cdfo.checked)
-        {mplaceplan.style.display = "flex"
-        madressplan.style.display = "flex"}else{
-            mplaceplan.style.display = "none"
-            madressplan.style.display = "none"}
-    
+    if (!cdfo.checked) {
+        mplaceplan.style.display = "flex"
+        madressplan.style.display = "flex"
+        csphone.style.display = "flex"
+    } else {
+        mplaceplan.style.display = "none"
+        madressplan.style.display = "none"
+        csphone.style.display = "none"
+    }
+
 })
+
+//send form for whatsapp
 
 const frm = document.querySelector("#frm")
 
-frm.addEventListener("submit", event =>{
+frm.addEventListener("submit", event => {
     event.preventDefault();
     const frm = event.target;
     const formData = {
-        tfdireccion: frm.fdireccion.value,
-        tname: frm.fname.value,
-        tphone: frm.fphone.value
+        phone: frm.fphone.value,
+        name: frm.csname.value,
+        namefriend: frm.fname.value,
+        plan: frm.valueselect.value,
+        pricev: frm.priceselect.value,
+
     };
 
-    const URL = `https://api.whatsapp.com/send?phone=51${formData.tphone}&text=Hi, ${formData.tname}%20you%20have%20scheduled%20an%20appointment%20on%20${formData.tfdireccion}%20with%20the%20following%20instructions%20&source=&data=`;
+    const URL = `https://api.whatsapp.com/send?phone=51${formData.phone}&text=Bienvenido%20${formData.name}%20%F0%9F%91%8B%F0%9F%8F%BC%2C%20a%20un%20paso%20de%20proteger%20tu%20mascota%20%F0%9F%90%B6%F0%9F%90%B1%F0%9F%90%B0${formData.namefriend}%2C%20finaliza%20el%20pago%20del%20plan%20elegido%20${formData.plan}%20%28${formData.pricev}%29%20y%20envia%20una%20la%20fotito%20de%20tu%20mascota%20junto%20al%20pago%20al%20correo%20idpet.soporte%40gmail.com%20o%20simplemente%20subelo%20por%20aqu%C3%AD%2C%20te%20esperamos%20con%20ansias%20de%20que%20formes%20parte%20de%20las%20familias%20que%20tienen%20a%20su%20mascotita%20protegida%20%E2%98%BA%EF%B8%8F%0A%0AOpciones%20de%20pago%3A%20%0A-%20YAPE%2FPLIN%20%3D%20982067675%20-%20KARLS%20CARRION%0A-%20TRANSFERENCIA%20BBVA%20%3D%20%200011-0814-0256551093%20%2F%20CCI%3A%2001181400025655109316                                                                                                
+                                                                                                `;
 
-  window.open(URL, "_blank");
+    window.open(URL, "_blank");
 })

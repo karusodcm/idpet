@@ -46,7 +46,7 @@
 
         </section>
 
-        <section class="data-plan nonel" id="formbuysend">
+        <section class="data-plan nonel" id="boxform">
             <div class="message-plan" id="messageplan">
                 <p>¡Por favor, completar todos lo campos!</p>
             </div>
@@ -71,11 +71,13 @@
                                 <select type="list" list="planes" class="sform-plan" name="planes" id="planes">
                                     <datalist id="planeslist">
                                         <option selected disabled value="">Plan</option>
-                                        <option value="Amigo">Amigo</option>
+                                        <option value="Amigo" data-price="S/.21">Amigo</option>
                                         <option value="Amoroso">Amoroso</option>
                                         <option value="Incondicional">Incondicional</option>
                                     </datalist>
                                 </select>
+                                <input type="text" class="nonel" id="valueselect">
+                                <input type="text" class="nonel" id="priceselect">
 
                             </fieldset>
 
@@ -173,48 +175,15 @@
                                     <label class="checkbox-plan"><input type="checkbox" id="cdfo"
                                             checked> Los mismos datos mi mascota</label>
                                 </div>
-                                <input type="text" placeholder="DNI/CE" class="iform-plan">
-                                <input type="text" placeholder="Nombres" class="iform-plan">
-                                <input type="text" placeholder="Apellido Paterno" class="iform-plan">
-                                <input type="text" placeholder="Apellido Materno" class="iform-plan">
-                                <input type="tel" placeholder="Celular/Teléfono" class="iform-plan">
-                                <input type="tel" placeholder="Correo Electrónico" class="iform-plan">
-                                <!-- <select type="list" list="regiones" class="sform-plan" name="region" id="region">
-                                    <datalist id="regiones">
-                                        <option selected disabled value="">Región</option>
-                                        <option value="Amazonas">Amazonas</option>
-                                        <option value="Ancash">Ancash</option>
-                                        <option value="Apurimac">Apurimac</option>
-                                        <option value="Arequipa">Arequipa</option>
-                                        <option value="Ayacucho">Ayacucho</option>
-                                        <option value="Cajamarca">Cajamarca</option>
-                                        <option value="Callao">Callao</option>
-                                        <option value="Cusco">Cusco</option>
-                                        <option value="Huancavelica">Huancavelica</option>
-                                        <option value="Huanuco">Huanuco</option>
-                                        <option value="Ica">Ica</option>
-                                        <option value="Junin">Junin</option>
-                                        <option value="La Libertad">La Libertad</option>
-                                        <option value="Lambayeque">Lambayeque</option>
-                                        <option value="Lima">Lima</option>
-                                        <option value="Loreto">Loreto</option>
-                                        <option value="Madre De Dios">Madre De Dios</option>
-                                        <option value="Moquegua">Moquegua</option>
-                                        <option value="Pasco">Pasco</option>
-                                        <option value="Piura">Piura</option>
-                                        <option value="Puno">Puno</option>
-                                        <option value="San Martin">San Martin</option>
-                                        <option value="Tacna">Tacna</option>
-                                        <option value="Tumbes">Tumbes</option>
-                                        <option value="Ucayali">Ucayali</option>
-                                    </datalist>
-                                </select> -->
-                                <input type="tel" placeholder="Departamento/Provincia/Distrito" class="iform-plan"
-                                    id="mplaceplan">
-                                <!-- <input type="tel" placeholder="Distrio" class="iform-plan"> -->
+                                <input type="text" placeholder="DNI/CE" class="iform-plan" id="csdni">
+                                <input type="text" placeholder="Nombres" class="iform-plan" id="csname">
+                                <input type="text" placeholder="Apellido Paterno" class="iform-plan" id="cspname">
+                                <input type="text" placeholder="Apellido Materno" class="iform-plan" id="csmname">
+                                <input type="tel" placeholder="Correo Electrónico" class="iform-plan" id="csemail">
+                                <input type="tel" placeholder="Celular/Teléfono" class="iform-plan" id="csphone">
+                                <input type="tel" placeholder="Departamento/Provincia/Distrito" class="iform-plan" id="mplaceplan">
                                 <input type="tel" placeholder="Dirección/Referencia" class="iform-plan"
                                     id="madressplan">
-                                <!-- <input type="tel" placeholder="Referencia" class="iform-plan"> -->
                             </fieldset>
 
                             <div class="group-btn">
@@ -238,7 +207,7 @@
                             <p class="n-plan">Protección por 3 MESES</p>
                             <p class="n-plan">Plaquita personalizada</p>
                             <p class="n-plan">Código QR</p>
-                            <p class="n-plan">S/.21</p>
+                            <p class="n-plan" id="pricefirst">S/.21</p>
                         </div>
                         <div>
                             <button class="btn-plan cpf" id="btnaddam">Adquirir</button>
@@ -252,7 +221,7 @@
                             <p class="n-plan">Protección por 6 MESES</p>
                             <p class="n-plan">Plaquita personalizada</p>
                             <p class="n-plan">Código QR</p>
-                            <p class="n-plan addam">S/.38</p>
+                            <p class="n-plan addam" id="pricesecond">S/.38</p>
                         </div>
                         <div>
                             <button class="btn-plan cpt" id="btnadda">Adquirir</button>
@@ -266,7 +235,7 @@
                             <p class="n-plan">Protección por 12 MESES</p>
                             <p class="n-plan">Plaquita personalizada</p>
                             <p class="n-plan">Código QR</p>
-                            <p class="n-plan addin">S/.79</p>
+                            <p class="n-plan addin" id="pricethree">S/.79</p>
                         </div>
                         <div>
                             <button class="btn-plan cptr" id="btnaddi">Adquirir</button>
