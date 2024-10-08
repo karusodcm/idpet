@@ -135,6 +135,25 @@ const madressplan = document.getElementById('madressplan')
 
 btnnext.addEventListener("click", unirTexto)
 
+// Función "añadir cero".
+function addZero(x, n) {
+    while (x.toString().length < n) {
+      x = "0" + x;
+    }
+    return x;
+  }
+  
+  // Añadir control al elemento "p" principal de la página.
+  function addControl() {
+    var d = new Date();
+    var x = document.getElementById("demo");
+    var h = addZero(d.getHours(), 2);
+    var m = addZero(d.getMinutes(), 2);
+    var s = addZero(d.getSeconds(), 2);
+    var ms = addZero(d.getMilliseconds(), 3);
+    x.value = h + m + s + ms;
+  }
+
 function unirTexto() {
     const jplanes = document.getElementById('planes').value
     const jfname = document.getElementById('fname').value
@@ -175,6 +194,7 @@ function unirTexto() {
         }, 2000)
 
     } else {
+        addControl();
         valueselect.value = jplanes
 
         mplaceplan.value = arrayPalabras.toUpperCase()
@@ -189,6 +209,7 @@ function unirTexto() {
         steeptwo.style.display = "block"
         boxsteeps.style.display = "block"
         boxsteepo.style.display = "none"
+        
     }
 
 }
@@ -223,11 +244,11 @@ frm.addEventListener("submit", event => {
         namefriend: frm.fname.value,
         plan: frm.valueselect.value,
         pricev: frm.priceselect.value,
+        id: frm.demo.value
 
     };
 
-    const URL = `https://api.whatsapp.com/send?phone=51${formData.phone}&text=Bienvenido%20${formData.name}%20%F0%9F%91%8B%F0%9F%8F%BC%2C%20a%20un%20paso%20de%20proteger%20tu%20mascota%20%F0%9F%90%B6%F0%9F%90%B1%F0%9F%90%B0${formData.namefriend}%2C%20finaliza%20el%20pago%20del%20plan%20elegido%20${formData.plan}%20%28${formData.pricev}%29%20y%20envia%20una%20la%20fotito%20de%20tu%20mascota%20junto%20al%20pago%20al%20correo%20idpet.soporte%40gmail.com%20o%20simplemente%20subelo%20por%20aqu%C3%AD%2C%20te%20esperamos%20con%20ansias%20de%20que%20formes%20parte%20de%20las%20familias%20que%20tienen%20a%20su%20mascotita%20protegida%20%E2%98%BA%EF%B8%8F%0A%0AOpciones%20de%20pago%3A%20%0A-%20YAPE%2FPLIN%20%3D%20982067675%20-%20KARLS%20CARRION%0A-%20TRANSFERENCIA%20BBVA%20%3D%20%200011-0814-0256551093%20%2F%20CCI%3A%2001181400025655109316                                                                                                
-                                                                                                `;
+    const URL = `https://api.whatsapp.com/send?phone=51${formData.phone}&text=Bienvenido%20${formData.name}%20%F0%9F%91%8B%F0%9F%8F%BC%2C%20a%20un%20paso%20de%20proteger%20tu%20mascota%20%F0%9F%90%B6%F0%9F%90%B1%F0%9F%90%B0${formData.namefriend}%2C%20finaliza%20el%20pago%20del%20plan%20elegido%20${formData.plan}%20%28${formData.pricev}%29%20y%20envia%20la%20fotito%20de%20tu%20mascota%20junto%20al%20pago%2C%20al%20correo%20idpet.soporte%40gmail.com%20o%20simplemente%20subelo%20por%20aqu%C3%AD%2C%20te%20esperamos%20con%20ansias%20de%20que%20formes%20parte%20de%20las%20familias%20que%20tienen%20a%20su%20mascotita%20protegida%20%E2%98%BA%EF%B8%8F%0A%0AOrden%3A${formData.id}%20%0A%0AOpciones%20de%20pago%3A%20%0A-%20YAPE%2FPLIN%20%3D%20982067675%20-%20KARLS%20CARRION%0A-%20TRANSFERENCIA%20BBVA%20%3D%20%200011-0814-0256551093%20%2F%20CCI%3A%2001181400025655109316`;
 
     window.open(URL, "_blank");
 })
