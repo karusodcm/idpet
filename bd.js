@@ -131,6 +131,28 @@ const csphone = document.getElementById('csphone')
 const mplaceplan = document.getElementById('mplaceplan')
 const madressplan = document.getElementById('madressplan')
 
+
+//conten-order form
+
+const completebuy = document.getElementById('completebuy')
+
+const orderid = document.getElementById('orderid')
+const planid = document.getElementById('planid')
+const nameid = document.getElementById('nameid')
+const fullnameid = document.getElementById('fullnameid')
+const phoneid = document.getElementById('phoneid')
+const emailid = document.getElementById('emailid')
+const addressid = document.getElementById('addressid')
+
+const endbtnbuy = document.getElementById('endbtnbuy')
+const printbtnbuy = document.getElementById('printbtnbuy')
+
+endbtnbuy.addEventListener("click", closePrint)
+
+function closePrint (){
+    completebuy.style.display = "none"
+}
+
 //complete fields
 
 btnnext.addEventListener("click", unirTexto)
@@ -147,11 +169,14 @@ function addZero(x, n) {
   function addControl() {
     var d = new Date();
     var x = document.getElementById("demo");
+    const pjorderid = document.getElementById('orderid')
     var h = addZero(d.getHours(), 2);
     var m = addZero(d.getMinutes(), 2);
     var s = addZero(d.getSeconds(), 2);
     var ms = addZero(d.getMilliseconds(), 3);
     x.value = h + m + s + ms;
+    pjorderid.value = h + m + s + ms;
+    pjorderid.disabled = true;
   }
 
 function unirTexto() {
@@ -231,6 +256,10 @@ cdfo.addEventListener("change", () => {
 
 })
 
+
+
+
+
 //send form for whatsapp
 
 const frm = document.querySelector("#frm")
@@ -251,4 +280,7 @@ frm.addEventListener("submit", event => {
     const URL = `https://api.whatsapp.com/send?phone=51${formData.phone}&text=Bienvenido%20${formData.name}%20%F0%9F%91%8B%F0%9F%8F%BC%2C%20a%20un%20paso%20de%20proteger%20tu%20mascota%20%F0%9F%90%B6%F0%9F%90%B1%F0%9F%90%B0${formData.namefriend}%2C%20finaliza%20el%20pago%20del%20plan%20elegido%20${formData.plan}%20%28${formData.pricev}%29%20y%20envia%20la%20fotito%20de%20tu%20mascota%20junto%20al%20pago%2C%20al%20correo%20idpet.soporte%40gmail.com%20o%20simplemente%20subelo%20por%20aqu%C3%AD%2C%20te%20esperamos%20con%20ansias%20de%20que%20formes%20parte%20de%20las%20familias%20que%20tienen%20a%20su%20mascotita%20protegida%20%E2%98%BA%EF%B8%8F%0A%0AOrden%3A${formData.id}%20%0A%0AOpciones%20de%20pago%3A%20%0A-%20YAPE%2FPLIN%20%3D%20982067675%20-%20KARLS%20CARRION%0A-%20TRANSFERENCIA%20BBVA%20%3D%20%200011-0814-0256551093%20%2F%20CCI%3A%2001181400025655109316`;
 
     window.open(URL, "_blank");
+    closeForm();
+    completebuy.style.display = "flex"
+
 })
