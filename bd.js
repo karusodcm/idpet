@@ -1,14 +1,8 @@
-const scroll = () => innerWidth - document.documentElement.clientWidth
-
-document.documentElement.style.setProperty('--scroll-bar', scroll())
+// document.getElementById('returnstart').addEventListener("click", ()=>{window.location.href = "index.html"})
 
 //page index
 
-const returnstart = document.getElementById('returnstart')
 
-returnstart.addEventListener("click", () => {
-    window.location.href = "index.html"
-})
 
 //options triangule
 
@@ -149,7 +143,7 @@ const printbtnbuy = document.getElementById('printbtnbuy')
 
 endbtnbuy.addEventListener("click", closePrint)
 
-function closePrint (){
+function closePrint() {
     completebuy.style.display = "none"
 }
 
@@ -160,13 +154,13 @@ btnnext.addEventListener("click", unirTexto)
 // Función "añadir cero".
 function addZero(x, n) {
     while (x.toString().length < n) {
-      x = "0" + x;
+        x = "0" + x;
     }
     return x;
-  }
-  
-  // Añadir control al elemento "p" principal de la página.
-  function addControl() {
+}
+
+// Añadir control al elemento "p" principal de la página.
+function addControl() {
     var d = new Date();
     var x = document.getElementById("demo");
     const pjorderid = document.getElementById('orderid')
@@ -177,7 +171,7 @@ function addZero(x, n) {
     x.value = h + m + s + ms;
     pjorderid.value = h + m + s + ms;
     pjorderid.disabled = true;
-  }
+}
 
 function unirTexto() {
     const jplanes = document.getElementById('planes').value
@@ -220,7 +214,9 @@ function unirTexto() {
 
     } else {
         addControl();
-        valueselect.value = jplanes
+        valueselect.value = jplanes;
+        planid.value = jplanes;
+        planid.disabled = true;
 
         mplaceplan.value = arrayPalabras.toUpperCase()
         madressplan.value = arrayAdress.toUpperCase()
@@ -234,7 +230,7 @@ function unirTexto() {
         steeptwo.style.display = "block"
         boxsteeps.style.display = "block"
         boxsteepo.style.display = "none"
-        
+
     }
 
 }
@@ -257,7 +253,31 @@ cdfo.addEventListener("change", () => {
 })
 
 
+function completorder() {
+    const jcsname = document.getElementById('csname').value
+    const jcspname = document.getElementById('cspname').value
+    const jcsmname = document.getElementById('csmname').value
+    const jcsemail = document.getElementById('csemail').value
+    const jcsphone = document.getElementById('csphone').value
+    const jmplaceplan = document.getElementById('mplaceplan').value
+    const jmadressplan = document.getElementById('madressplan').value
 
+    let mfullname = jcspname + ' ' + jcsmname
+    let mfulladdress = jmplaceplan + '/' + jmadressplan
+
+    nameid.value = jcsname
+    fullnameid.value = mfullname
+    phoneid.value = jcsphone
+    emailid.value = jcsemail
+    addressid.value = mfulladdress
+
+    nameid.disabled = true
+    fullnameid.disabled = true
+    phoneid.disabled = true
+    emailid.disabled = true
+    addressid.disabled = true
+
+}
 
 
 //send form for whatsapp
@@ -281,6 +301,9 @@ frm.addEventListener("submit", event => {
 
     window.open(URL, "_blank");
     closeForm();
-    completebuy.style.display = "flex"
+    completebuy.style.display = "flex";
+    completorder()
 
 })
+
+

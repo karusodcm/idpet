@@ -520,6 +520,14 @@ select:focus {
 
 /*message buy*/
 
+.wi{
+    width: 100%;
+}
+
+.w150{
+    width: 150px;
+}
+
 .completebuy{
     position: absolute;
     top:0;
@@ -539,7 +547,7 @@ select:focus {
 
 .bhead{
     background-color: rgb(226, 226, 226);
-    padding: 1rem;
+    padding: .5rem;
 }
 
 .textorden{
@@ -549,11 +557,12 @@ select:focus {
 
 .buyplantitle{
     border-bottom: 1px solid rgb(226, 226, 226);
-    padding: .5rem 0;
+    padding: .3rem 0;
 }
 
 .nameordenplan{
     display: inline-block;
+    font-size: .9rem;
 }
 
 .boxtextplan{
@@ -566,22 +575,24 @@ select:focus {
 
 .nameorden{
     color: #b83dff;
+    font-size: .8rem;
 }
 
 .buymain{
-    padding: 1rem;
+    padding: .5rem 1rem .5rem 1rem;
 }
 
 .mbuy{
     padding: .3rem;
     border: none;
     background-color: transparent;
+    font-size: .9rem;
 }
 
 .groupbtnend{
     width: 100%;
-    padding: 0 1em;
-    padding-bottom: 1rem;
+    padding: 0 1rem;
+    padding-bottom: .5rem;
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
@@ -593,10 +604,12 @@ select:focus {
     text-decoration: none;
     background-color: #961add;
     color: #fff;
-    padding: .3rem 1rem;
+    padding: .3rem 0;
     border-radius: .25rem;
     width: 20%;
     display: block;
+    font-size: .9rem;
+    text-align: center;
 }
 
 .endbtnbuy:hover{
@@ -613,10 +626,22 @@ select:focus {
     width: 70%;
     display: block;
     margin-left: .2rem;
+    font-size: .9rem;
 }
 
 .printbtnbuy:hover{
     background-color: #860ccc;
+}
+
+.txtfind{
+    font-size: .8rem;
+}
+
+.textmin{
+    font-size: .6rem;
+    display: block;
+    text-align: center;
+    margin: 0 auto 1rem; 
 }
 
 @media screen and (min-width: 700px) {

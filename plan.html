@@ -15,7 +15,6 @@
     <meta property="og:site_name" content="Plaquitas personalizadas con tecnología NFC y QR.">
     <meta name="theme-color" content="#FFF">
     <link rel="stylesheet" href="plan.css">
-    <script type="text/javascript" src="qrcode.js"></script>
     <meta name="theme-color" content="#db9ee5">
 </head>
 
@@ -45,32 +44,43 @@
             <div class="messagecomplete">
                 <div class="buyhead">
                     <div class="bhead">
-                        <span class="textorden">Pedido: #</span><input type="text" class="mbuy" id="orderid" value="2000">
+                        <span class="textorden">Pedido: #</span><input type="text" class="mbuy" id="orderid" value="">
                     </div>
                 </div>
                 <div class="buymain">
                     <div class="buyplantitle">
-                        <span class="nameordenplan">Plan elegido</span><input type="text" class="mbuy" name="" id="planid" value="2000">
+                        <span class="nameordenplan">Plan elegido</span><input type="text" class="mbuy" name="" id="planid" value="">
                     </div>
                     <div class="boxtextplan">
-                        <p class="nameorden">Nombres</p><input type="text" class="mbuy" id="nameid" value="2000">
+                        <p class="nameorden">Nombres</p><input type="text" class="mbuy wi" id="nameid" value="">
                     </div>
                     <div class="boxtextplan">
-                        <p class="nameorden">Apellidos</p><input type="text" class="mbuy" id="fullnameid">
+                        <p class="nameorden">Apellidos</p><input type="text" class="mbuy wi" id="fullnameid">
                     </div>
                     <div class="boxtextplan">
-                        <p class="nameorden">Celular</p><input type="text" class="mbuy" id="phoneid">
+                        <p class="nameorden">Celular</p><input type="text" class="mbuy wi" id="phoneid">
                     </div>
                     <div class="boxtextplan">
-                        <p class="nameorden">Correo</p><input type="text" class="mbuy" id="emailid">
+                        <p class="nameorden">Correo</p><input type="text" class="mbuy wi" id="emailid">
                     </div>
                     <div class="boxtextplan">
-                        <p class="nameorden">Dirección de entrega</p><input type="text" class="mbuy" id="addressid">
+                        <p class="nameorden ">Dirección de entrega</p><textarea type="text" class="mbuy wi" id="addressid" rows="3"></textarea>
+                    </div>
+                </div>
+                <div class="buymain">
+                    <div class="buyplantitle">
+                        <span class="nameordenplan">Opciones Pago</span>
+                    </div>
+                    <div class="boxtextplan txtfind">
+                        <p class="nameorden txtfind">YAPE/PLIN</p><input type="text" class="mbuy wi txtfind" id="nameidp" value="982067675 - KARLS CARRION" disabled>
+                    </div>
+                    <div class="boxtextplan txtfind">
+                        <p class="nameorden txtfind">CUENTA BBVA</p><textarea type="text" class="mbuy wi txtfind" id="nameidp" value="" disabled rows="2">0011-0814-0256551093 / CCI: 01181400025655109316</textarea>
                     </div>
                 </div>
                 <div class="groupbtnend">
-                    <a href="" class="endbtnbuy" id="endbtnbuy">Cerrar</a>
-                    <a href="" class="printbtnbuy" id="printbtnbuy">Imprimir</a>
+                    <a class="endbtnbuy" id="endbtnbuy">Cerrar</a>
+                    <a class="printbtnbuy" id="printbtnbuy">Imprimir</a>
                 </div>
 
             </div>           
@@ -280,10 +290,8 @@
     <footer class="footer">
         <p class="txfoo">Copyright © 2024 idpet.org All rights reserved.</p>
     </footer>
-    <script src="bd.js">
-
-
-    </script>
+    <script src="bd.js"></script>
+    <script src="sizepage.js"></script>
 
 
 </body>
