@@ -73,7 +73,7 @@
     background-color: var(--color-first);
     color: var(--color-white);
     padding: 0 .2rem 0 .2rem;
-    border-radius: .2rem;
+    border-radius: .2rem .2rem .2rem .2rem ;
     font-family: var(--font-two);
     letter-spacing: -1px;
 }
@@ -158,6 +158,14 @@
     width: 100%;
     position: relative;
 }
+
+.data-plan{
+    position: absolute;
+    top:0;
+    width: 100%;
+    /* background-color: #ffffffcb; */
+}
+
 
 .section-plan{
     width: 90%;
@@ -349,12 +357,6 @@
     font-weight: 300;
 }
 
-.data-plan{
-    position: absolute;
-    top:0;
-    width: 100%;
-    background-color: #ffffffcb;
-}
 
 .message-plan{
     position: absolute;
@@ -399,6 +401,9 @@
 
 .form-plan{
     padding: 1rem;
+    background-color: #fff;
+    border: 1px solid aquamarine;
+    border-radius: 0 0 .8rem .8rem;
 }
 
 .steep-plan{
@@ -417,7 +422,7 @@ width: 100%;
 .fieldset-plan{
     border: none;
     margin: .5rem auto;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px dashed #fff;
     padding-bottom: .5rem;
 }
 
@@ -442,6 +447,42 @@ width: 100%;
     border: 1px solid rgb(0, 255, 170);
     font-size: .9rem;
     color: rgb(54, 54, 54);
+}
+
+.iformtuto{
+    width: 100%;
+    margin: .3rem auto;
+    font-size: .9rem;
+    color: rgb(54, 54, 54);
+    position: relative;
+}
+
+.inputubicacion{
+    padding: .3rem;
+    width: 100%;
+    padding: .5rem;
+    border-radius: 0.25rem;
+    border: 1px solid rgb(0, 255, 170);
+    font-size: .9rem;
+    color: rgb(54, 54, 54);
+}
+
+.infotuto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    width: 25px;
+    height: 25px;
+    background-color: yellow;
+    font-style: italic;
+    box-shadow: 0px 0px 2px #7a7a7a;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    
 }
 
 .iform-plan::placeholder{
@@ -517,6 +558,9 @@ select:focus {
     outline: rgb(0, 255, 170);
     border: 2px solid rgb(0, 255, 170);
 }
+
+
+
 
 /*message buy*/
 
@@ -644,15 +688,83 @@ select:focus {
     margin: 0 auto 1rem; 
 }
 
+
+
 @media screen and (min-width: 700px) {
     .main-plan{
-        width: 70%;
-        margin: 1.5rem auto;
+        width: 100%;
     }
 
     .sdivs-plan{
         margin: 1.5rem auto; 
     }
+
+    .data-plan{
+        width: 100%;
+    }
+
+    .secdata-plan{
+        width: 80%;
+    }
+
+    .form-plan{
+        padding: 1rem 3rem;
+    }
+    
+    .fieldset-plan{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        align-items: center; 
+        margin-bottom: 1rem;  
+    }
+
+    .legend-plan{
+        text-align:center;
+        margin-bottom: 1rem;
+    }
+
+    .sform-plan{
+        padding: .3rem;
+        width: 45%;
+        margin: .3rem auto;
+        padding: .5rem;
+    }
+    
+    .iform-plan{
+        padding: .3rem;
+        width: 45%;
+        margin: .3rem auto;
+        padding: .5rem;
+    }
+
+    .iformtuto{
+        width: 45%;
+    }
+
+    .group-btn{
+        width: 70%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .box-checkbox-plan{
+        margin: .5rem auto;
+        width: 45%;
+    }
+
+    .ico-close{
+        right: 3%;
+    }
+
+    .smollinput{
+        width: 20%;
+
+    }
+
 
 }
 
