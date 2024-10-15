@@ -22,7 +22,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: var(--font-one);
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
 }
 
@@ -163,7 +163,8 @@
     position: absolute;
     top:0;
     width: 100%;
-    /* background-color: #ffffffcb; */
+    height: 100%;
+    background-color: var(--bg-secondary); 
 }
 
 
@@ -403,7 +404,7 @@
     padding: 1rem;
     background-color: #fff;
     border: 1px solid aquamarine;
-    border-radius: 0 0 .8rem .8rem;
+    border-radius: 0 0 .5rem .5rem;
 }
 
 .steep-plan{
@@ -722,6 +723,7 @@ select:focus {
     .legend-plan{
         text-align:center;
         margin-bottom: 1rem;
+        font-family: var(--font-two);
     }
 
     .sform-plan{
