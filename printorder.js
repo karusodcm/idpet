@@ -1,1 +1,0 @@
-document.getElementById('buypp').addEventListener("click", ()=>{window.print()});

@@ -1,13 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <title>IDPET</title>
+    <meta name="description" content="Tu mascota segura">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="icon" href="img/idico.png">
+    <meta property="og:locale" content="es_Es">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Identificador">
+    <meta property="og:description" content="Plaquitas personalizadas con tecnología NFC y QR.">
+    <meta property="og:url" content="https://www.idpet.org/">
+    <meta property="og:site_name" content="Plaquitas personalizadas con tecnología NFC y QR.">
+    <meta name="theme-color" content="#FFF">
+    <link rel="stylesheet" href="css/index.css">
+    <meta name="theme-color" content="#db9ee5">
 </head>
-<body>
-    <main></main>
-    <footer></footer>
+
+<body class="i-body">
+    <header class="i-head">
+        <div class="i-content-nav-logo">
+            <img src="img/idico.png" alt="" class="i-logo-id"><a class="i-logo-name">PET</a>
+        </div>
+        <nav class="i-nav">
+            <a class="i-content-nav-buy" href="plan.html"></a>
+            <a class="i-content-nav-access" href="store.html"></a>
+        </nav>
+    </header>
+    <main class="i-main">
+        <section class="i-first-section">
+            <img src="img/imgfirst.jpg" alt="" class="i-principal-banner">
+            <p class="i-text-protect">PROTEGE TU MASCOTA</p>
+            <div class="i-group-btn">
+                <a class="i-btn-first" href="#beneficios">Beneficios</a>
+                <a class="i-btn-first i-s" href="model.html">Modelos</a>
+            </div>
+        </section>
+        <section class="i-second-section">
+            <p class="i-text-ssection">SIEMPRE PROTEGIDO</p>
+            <div class="i-content-always">
+                <div class="i-content-first bclinear" id="ppersonalizada">
+                    <p class="i-text-conten-ssection">Plaquita personalizadas</p>
+                    <div class="i-content-img-first">
+                        <img src="img/dog.webp" alt="" class="i-img-dogplaca">
+                    </div>
+                </div>
+                <div class="i-content-first bclinear" id="dcompletos">
+                    <p class="i-text-conten-ssection">Datos completos</p>
+                    <div class="i-content-img-first">
+                        <img src="img/phone2.webp" alt="" class="i-img-dogplaca">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="i-second-section" id="beneficios">
+            <p class="i-text-ssection">BENEFICIOS</p>
+            <div class="i-content-always">
+                <div class="i-central">
+                    <div class="i-backcenter">
+                        <p class="i-textfirst">
+                            Datos principales visibles en la plaquita.
+                        </p>
+                        <div class="i-contentimg">
+                            <img src="img/firstelement.png" alt="" class="i-imgfirst">
+                        </div>
+                    </div>
+                </div>
+                <div class="i-central">
+                    <div class="i-backcenter">
+                        <p class="i-textfirst">
+                            Datos completos visibles en el QR.
+                        </p>
+                        <div class="i-contentimg">
+                            <img src="img/secondelement.png" alt="" class="i-imgfirst">
+                        </div>
+                    </div>
+                </div>
+                <div class="i-central">
+                    <div class="i-backcenter">
+                        <p class="i-textfirst">
+                            En la página botones de contecto directo.
+                        </p>
+                        <div class="i-contentimg">
+                            <img src="img/threeelment.png" alt="" class="i-imgfirst">
+                        </div>
+                    </div>
+                </div>
+                <div class="i-central">
+                    <div class="i-backcenter">
+                        <p class="i-textfirst">
+                            Placa NFC para acceder solo al primer contacto.
+                        </p>
+                        <div class="i-contentimg">
+                            <img src="img/fourelement.png" alt="" class="i-imgfirst">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="i-second-section">
+            <p class="i-text-ssection">MODELOS</p>
+            <div class="i-placa-flex">
+                <div class="i-contentcolores">
+                    <p class="i-colores red" id="red">Rojo</p>
+                    <p class="i-colores purple" id="purple">Morado</p>
+                    <p class="i-colores green" id="green">Verde</p>
+                    <a class="i-colores more" href="model.html">Más</a>
+                </div>
+                <div class="i-placa" id="placa">
+                    <div id="codigo-qr" title="www.idpet.org">
+                    </div>
+                </div>
+             
+            </div>
+        </section>
+        <section class="i-finish-section">
+            <p class="i-text-ssection">PLANES</p>
+            <div class="i-off">
+                <img src="img/imgfinish.webp" alt="" class="i-imgfinish">
+                <div class="i-textfinish">
+                    <p class="i-t">PROTEGE</p>
+                    <p class="i-t"><span class="i-complete">tu</span> MASCOTA</p>
+                    <p class="i-t"><span class="i-complete">desde</span> S/.7</p>
+                    <a href="plan.html" class="i-btn-plan i-t" >Ver planes</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="i-footer">
+        <p class="i-txfoo">Copyright © 2024 orienta.team All rights reserved.</p>
+
+    </footer>
+    <script src="js/index.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/size.js"></script>
+    <script src="js/qr.js"></script>
+    <script src="js/qrcode.js"></script>
     
+
+
+
 </body>
+
 </html>

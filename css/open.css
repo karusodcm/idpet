@@ -1,0 +1,42 @@
+.i-content-first::before {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgba(204, 0, 255), rgba(255, 0, 191));
+    filter: blur(10px);
+    z-index: -100;
+}
+
+.i-content-first::after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgb(255, 0, 85), rgb(98, 0, 255));
+    filter: blur(10px);
+    z-index: -100;
+}
+
+
+
+
+.i-content-first:hover::after {
+    animation: rotate 1.5s linear infinite;
+}
+
+@keyframes rotate {
+
+    0%,
+    100% {
+        filter: hue-rotate(0deg);
+    }
+
+    50% {
+        filter: hue-rotate(50deg);
+    }
+}
