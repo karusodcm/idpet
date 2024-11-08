@@ -262,7 +262,7 @@
     background-position: right;
 }
 
-.img-big{
+.img-big {
     display: none;
 }
 
@@ -278,7 +278,7 @@
     z-index: 99;
 }
 
-.i-banner-txt-small{
+.i-banner-txt-small {
     display: none;
 }
 
@@ -532,7 +532,6 @@
     filter: blur(10px);
 }
 
-
 .i-qr-btns {
     display: flex;
     flex-flow: row nowrap;
@@ -634,8 +633,6 @@
     background-color: transparent;
 }
 
-
-
 .i-plan-bc {
     position: absolute;
     display: block;
@@ -680,6 +677,10 @@
     display: block;
     object-fit: cover;
     background-position: right;
+}
+
+.end_imgbig {
+    display: none;
 }
 
 /* CONTACT OTHERS */
@@ -770,6 +771,36 @@
     color: #fff;
 }
 
+@media screen and (min-width: 511px) {
+    .wt700 {
+        padding: 6rem 0 1.3rem;
+    }
+} 
+
+
+
+@media screen and (min-width: 700px) {
+    .wt700 {
+        padding: 6rem 0 1.3rem;
+    }
+
+    .i-plans {
+        height: 590px;
+    }
+
+    .i-plans-imgs{
+        height: 390px;
+    }
+
+    .i-placas-imgs {
+        padding: 0;
+    }
+
+
+}
+
+
+
 @media screen and (min-width: 1000px) {
     .i-nav {
         padding: 0 3rem;
@@ -818,7 +849,7 @@
         position: relative;
     }
 
-    .i-banner-txt-small{
+    .i-banner-txt-small {
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
@@ -855,11 +886,11 @@
         bottom: 30%;
     }
 
-    .img-small{
+    .img-small {
         display: none;
     }
 
-    .img-big{
+    .img-big {
         display: block;
     }
 
@@ -896,15 +927,46 @@
         color: #fff;
     }
 
-    .b-small{
-        padding: 0 0 1.5rem 1.3rem; 
+    .b-small {
+        padding: 0 0 1.5rem 1.3rem;
     }
 
     .i-placas-imgs {
-        width:60%;
+        width: 60%;
         display: flex;
         flex-flow: row wrap;
         padding: 0 0 0 8rem;
+    }
+
+    .i-models-colors {
+        flex-flow: row nowrap;
+
+    }
+
+    .i-qr-btns {
+        display: none;
+    }
+
+    .i-example-placaqr {
+        position: relative;
+    }
+
+    .i-plans {
+        height: 630px;
+    }
+
+    .i-plans-imgs{
+        height: 430px;
+    }
+
+    .end_imgsmoll {
+        display: none;
+    }
+
+    .end_imgbig {
+        display: block;
+        height: 100%;
+
     }
 
 
