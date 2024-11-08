@@ -1,27 +1,32 @@
-const ppersonalizada = document.getElementById('ppersonalizada')
-const dcompletos = document.getElementById('dcompletos')
-
-ppersonalizada.addEventListener('click',()=>{
-    window.location.href = 'model.html'
-})
-
-dcompletos.addEventListener('click',()=>{
-    window.location.href = 'example.html'
-})
-
 const red = document.getElementById('red')
-const purple = document.getElementById('purple')
 const green = document.getElementById('green')
+const circle = document.getElementById('circle')
+const rombo = document.getElementById('rombo')
+const shadow = document.querySelector('.i-shadown-placa')
+const cc = document.querySelector('.i-example-placaqr')
 const placa = document.getElementById('placa')
 
 red.addEventListener('click',()=>{
-    placa.style.border = '7px solid red'
-})
-
-purple.addEventListener('click',()=>{
-    placa.style.border = '7px solid purple'
+    placa.style.border = '10px solid red'
 })
 
 green.addEventListener('click',()=>{
-    placa.style.border = '7px solid green'
+    placa.style.border = '10px solid green'
 })
+
+circle.addEventListener('click',()=>{
+    placa.style.width = '190px'
+    placa.style.height = '190px'
+    shadow.style.display = 'none'
+    placa.style.borderRadius = '50%'
+    cc.style.marginTop = '-1rem'
+})
+
+rombo.addEventListener('click',()=>{
+    placa.style.width = '150px'
+    placa.style.height = '150px'
+    shadow.style.display = 'block'
+    placa.style.borderRadius = '.5rem'
+    cc.style.marginTop = '0'
+})
+
