@@ -774,40 +774,102 @@
     color: #fff;
 }
 
-@media screen and (min-width: 511px) {
-    .wt700 {
-        padding: 6rem 0 1.3rem;
-    }
-} 
 
+/* EXAMPLE */
 
+.e-header {
+    width: 100%;
+    z-index: 100;
+}
 
-@media screen and (min-width: 700px) {
-    .wt700 {
-        padding: 6rem 0 1.3rem;
-    }
+.e-list-login {
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    background-color: #ffffff;
+    border-radius: .5rem;
+    position: relative;
+    margin-right: .5rem;
+    box-shadow: 0px 0px 2px rgb(255, 255, 255);
+    cursor: pointer;
+    color: #000;
+}
 
-    .i-plans {
-        height: 590px;
-    }
+.e-list-login:hover {
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+    rotate: 0deg;
+}
 
-    .i-plans-imgs{
-        height: 510px;
-    }
+.e-list-login::before {
+    content: '🐶';
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translateY(-50%);
+}
 
-    .i-placas-imgs {
-        padding: 0;
-    }
+.e-list-login::after {
+    content: 'Ingresar';
+    display: block;
+    color: #000000;
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    transform: translateY(-50%);
+    font-size: .8rem;
+}
 
+.e-banner-group {
+    width: 100%;
+    height: 255px;
+    position: relative;
+    background-color: #000000;
+}
+
+.e-banner-txts {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.e-banner-textp {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 0 1rem;
+    text-align: center;
+    font-family: var(--font-two);
+    margin-bottom: -10px;
+}
+
+.e-name{
+    font-size: 3rem;
+}
+
+.e-phone{
+    margin-bottom: 5px;
+}
+
+.e-banner-texts{
+    color: #ff0;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0 1rem;
+    text-align: center;
 
 }
 
 
 
-@media screen and (min-width: 1000px) {
-    .i-nav {
-        padding: 0 3rem;
-    }
+@media screen and (min-width: 511px) {
 
     .i-list-access {
         width: 100px;
@@ -837,6 +899,41 @@
         left: 18px;
         transform: translateY(-50%);
         font-size: .8rem;
+    }
+
+
+    .wt700 {
+        padding: 6rem 0 1.3rem;
+    }
+}
+
+
+
+@media screen and (min-width: 700px) {
+    .wt700 {
+        padding: 6rem 0 1.3rem;
+    }
+
+    .i-plans {
+        height: 590px;
+    }
+
+    .i-plans-imgs {
+        height: 510px;
+    }
+
+    .i-placas-imgs {
+        padding: 0;
+    }
+
+
+}
+
+
+
+@media screen and (min-width: 1000px) {
+    .i-nav {
+        padding: 0 3rem;
     }
 
     .i-banner-group {
@@ -958,7 +1055,7 @@
         height: 530px;
     }
 
-    .i-plans-imgs{
+    .i-plans-imgs {
         height: 430px;
     }
 
