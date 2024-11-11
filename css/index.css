@@ -850,22 +850,136 @@
     margin-bottom: -10px;
 }
 
-.e-name{
+.e-banner-shadow {
+    position: absolute;
+    display: block;
+    background-color: rgb(0, 0, 0);
+    width: 100%;
+    height: 5rem;
+    top: -5px;
+    left: 0;
+    background: linear-gradient(#000, 50%, transparent);
+    z-index: 99;
+}
+
+
+.e-banner-imgs {
+    width: 100%;
+    height: 310px;
+    position: relative;
+}
+
+.e-banner-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    background-position: right;
+}
+
+.emg-big {
+    display: none;
+}
+
+.e-name {
     font-size: 3rem;
 }
 
-.e-phone{
+.e-phone {
     margin-bottom: 5px;
 }
 
-.e-banner-texts{
+.e-banner-texts {
     color: #ff0;
     font-size: 1rem;
     font-weight: 500;
     padding: 0 1rem;
     text-align: center;
+}
+
+.e-example {
+    display: block;
+    background-color: #ffffff;
+    width: 100%;
+    height:395px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: center;
+}
+
+.e-example-phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.e-position-adress {
+    display: block;
+    height: 300px;
+    border-radius: 0.25rem;
+    border: 1px solid rgba(102, 51, 153, 0.432);
+}
+
+.e-plans {
+    display: block;
+    background-color: transparent;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: center;
+}
+
+.e-contact {
+    width: 100%;
+    background-color: white;
+    padding: 1.5rem 0 1rem;
+}
+
+.e-iconmedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem .3rem;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: rebeccapurple;
+    background-color: rgba(102, 51, 153, 0.123);
+    text-align: center;
+}
+
+.e-iconmedia:hover {
+    color: rgb(46, 9, 83);
+}
+
+.e-slogan{
+    color: rebeccapurple;
+    text-align: center;
 
 }
+
+.e-footer {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    border-top: 1px solid rgba(102, 51, 153, 0.281);
+    background-color: #fff;
+}
+
+.e-txfoo {
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 300;
+    color: rebeccapurple;
+}
+
+
 
 
 
@@ -925,6 +1039,16 @@
     .i-placas-imgs {
         padding: 0;
     }
+
+
+
+    /* EXAMPLE */
+
+
+   .e-position-adress {
+        width: 600px;
+    }
+
 
 
 }
@@ -1067,6 +1191,53 @@
         display: block;
         height: 100%;
 
+    }
+
+
+    /* EXAMPLE */
+
+
+
+    .e-banner-group {
+        display: none;
+    }
+
+    .e-banner-shadow {
+        display: none;
+    }
+
+    .e-banner-txts {
+        display: none;
+    }
+
+    .e-banner-imgs {
+        width: 100%;
+        height: 410px;
+        position: relative;
+    }
+    
+    .e-banner-img {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+        background-position: right;
+        background-color: #000;
+        /* mask-image: linear-gradient(90deg in oklab,black,transparent 99%);  */
+    }
+
+    .emg-big {
+        display: block;
+    }
+
+    .e-example {
+        height: 300px;
+    }
+
+    .e-position-adress {
+        height: 200px;
+        width: 700px;
     }
 
 
