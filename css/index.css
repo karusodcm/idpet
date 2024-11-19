@@ -417,7 +417,7 @@
 }
 
 .i-placa-img {
-    background: linear-gradient(#a200ff, 60%, #ffffff00);
+    /* background: linear-gradient(#a200ff, 60%, #ffffff00); */
     border-radius: 0.8rem;
     padding: 3px;
     display: block;
@@ -539,6 +539,7 @@
     align-items: center;
     width: 90%;
     margin: 1rem 0 3.5rem;
+    opacity: 0;
 }
 
 .i-qr-btn {
