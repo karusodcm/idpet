@@ -1,0 +1,163 @@
+/* FUENTE */
+
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Mochiy+Pop+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --font-one: 'Roboto', 'Rubik', 'sans-serif';
+    --font-two: 'Rubik', 'Roboto', 'sans-serif';
+    --font-three: 'Londrina Solid', 'Roboto', 'sans-serif';
+    --font-four: 'Mochiy Pop One', 'Roboto', 'sans-serif';
+
+    --scroll-bar: 13px;
+
+    --boderc-one: rgb(228, 165, 247);
+    --color-first: rgba(86, 13, 109);
+    --color-white: #fff;
+    --color-black: #000;
+
+    --bg-primary: rgba(249, 242, 231);
+    --bg-secondary: rgba(231, 249, 244);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-one);
+    font-size: 1rem;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* BODY */
+.bd-body {
+    width: calc(100vw - var(--scroll-bar));
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: radial-gradient(600px at 0 0, var(--bg-primary), var(--bg-secondary));
+    position: relative;
+    /* background-image: url(/img/bidraw.svg);
+    background-repeat: repeat;
+    background-size: contain;
+    position: relative;
+    background-color: var(--bg-secondary); */
+}
+
+.boyson {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    background-image: url(/img/imgworld.webp);
+    background-repeat: repeat;
+    background-size: contain;
+    opacity: .2;
+}
+
+.log-content{
+    display: block;
+    background-color:#fff;
+    width: 300px;
+    height: 430px;
+    border-radius: .25rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+}
+
+.b-shadow{
+    position: absolute;
+    background-color: rgba(72, 72, 75, 0.459);
+    width: 330px;
+    height: 460px;
+    top:-15px;
+    left: -30px;
+    opacity: .2;
+    filter: blur(30px);
+    z-index: -1;
+}
+
+.lg-header{
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
+.log-content-id{
+    display: block;
+    width: 100%;
+    height: 100px;
+}
+
+.lg-logo-id{
+    display: block;
+    width: 50px;
+    padding-top: 25px;
+    margin: 0 auto;
+}
+
+.lg-title, .lg-label{
+    display: block;
+    color: #48484b;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.lg-main{
+    display: block;
+    border: 1px solid rgba(72, 72, 75, 0.1);
+    width: 280px;
+    margin: 1rem 0;
+    border-radius: .25rem;
+    padding-top: .25rem;
+}
+
+.lg-label{
+    width: 100%;
+    padding: .5rem 1rem;
+}
+
+.lg-input{
+    display: block;
+    width:90%;
+    padding: .5rem 1rem;
+    margin: 0 auto;
+    border-radius: .3rem;
+    border: 1px solid rgba(72, 72, 75, 0.5);
+}
+
+.btn{
+    background-color: #2CC87F;
+    color: #fff;
+    border: none;
+    margin:  1rem auto 1rem;
+}
+
+.btn:hover{
+    background-color: #0cc46e;
+}
+
+.acces-lg{
+    text-align: center;
+    font-size: .9rem;
+    text-decoration: none;
+    padding: .3rem 0;
+    color: #0b57d0;
+    cursor: pointer;
+}
+
+input:focus {
+    border-color: rgb(0, 255, 170);
+    outline: rgb(0, 255, 170);
+    border: 2px solid rgb(0, 255, 170);
+}
